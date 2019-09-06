@@ -77,7 +77,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
 
             try {
                 Task whenCanceled = Task.Delay(Timeout.InfiniteTimeSpan, _cancellationTokenSource.Token);
-                
+
                 _cancellationTokenSource.Cancel();
 
                 try {
@@ -98,7 +98,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
             if (!_initialized) {
                 return;
             }
-            
+
             _restart = true;
             StopListening();
         }
@@ -119,7 +119,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
             _buffer = new byte[audioConfiguration.dspBufferSize * 2];
 
             _audioSource = gameObject.GetComponent<AudioSource>();
-            AudioMixer audioMixer = (AudioMixer)Resources.Load("MicrophoneMixer");
+            AudioMixer audioMixer = (AudioMixer)AssetDatabase.LoadAssetAtPath("Packages/oshoham.unity-google-cloud-streaming-speech-to-text/MicrophoneMixer", typeof(AudioMixer));
             AudioMixerGroup[] audioMixerGroups = audioMixer.FindMatchingGroups("MuteMicrophone");
             if (audioMixerGroups.Length > 0) {
                 _audioSource.outputAudioMixerGroup = audioMixerGroups[0];
@@ -141,7 +141,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
             if (!_initialized) {
                 return;
             }
-            
+
             Microphone.End(_microphoneName);
             _audioSource.Stop();
             _cancellationTokenSource?.Dispose();
@@ -151,7 +151,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
             if (!_listening) {
                 return;
             }
-            
+
             if (_newStream && _lastAudioInput.Count != 0) {
                 // Approximate math to calculate time of chunks
                 double chunkTime = StreamingLimit / (double)_lastAudioInput.Count;
@@ -186,7 +186,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
                 _buffer[i * 2] = bytes[0];
                 _buffer[i * 2 + 1] = bytes[1];
             }
-            
+
             ByteString chunk = ByteString.CopyFrom(_buffer, 0, _buffer.Length);
 
             _audioInput.Add(chunk);
@@ -269,13 +269,13 @@ namespace UnityGoogleCloudStreamingSpeechToText {
             }
             try {
                 await Task.Delay(StreamingLimit, _cancellationTokenSource.Token);
-                
+
                 _newStreamOnRestart = true;
 
                 if (enableDebugLogging) {
                     Debug.Log("Streaming limit reached, restarting...");
                 }
-                
+
                 Restart();
             } catch (TaskCanceledException) {}
         }
@@ -298,9 +298,9 @@ namespace UnityGoogleCloudStreamingSpeechToText {
                     InterimResults = returnInterimResults,
                 }
             });
-            
+
             _cancellationTokenSource = new CancellationTokenSource();
-            
+
             Task handleTranscriptionResponses = HandleTranscriptionResponses();
 
             _listening = true;
@@ -312,7 +312,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
             if (enableDebugLogging) {
                 Debug.Log("Ready to transcribe.");
             }
-            
+
             RestartAfterStreamingLimit();
 
             try {
@@ -341,14 +341,14 @@ namespace UnityGoogleCloudStreamingSpeechToText {
                     _restart = false;
                     if (_newStreamOnRestart) {
                         _newStreamOnRestart = false;
-                        
+
                         _newStream = true;
-                        
+
                         if (_resultEndTime > 0) {
                             _finalRequestEndTime = _isFinalEndTime;
                         }
                         _resultEndTime = 0;
-                
+
                         _lastAudioInput = null;
                         _lastAudioInput = _audioInput;
                         _audioInput = new List<ByteString>();
