@@ -120,7 +120,7 @@ namespace UnityGoogleCloudStreamingSpeechToText {
             _buffer = new byte[audioConfiguration.dspBufferSize * 2];
 
             _audioSource = gameObject.GetComponent<AudioSource>();
-            AudioMixer audioMixer = (AudioMixer)AssetDatabase.LoadAssetAtPath("Packages/oshoham.unity-google-cloud-streaming-speech-to-text/MicrophoneMixer.mixer", typeof(AudioMixer));
+            AudioMixer audioMixer = (AudioMixer)AssetDatabase.LoadAssetAtPath("Packages/com.oshoham.unity-google-cloud-streaming-speech-to-text/MicrophoneMixer.mixer", typeof(AudioMixer));
             AudioMixerGroup[] audioMixerGroups = audioMixer.FindMatchingGroups("MuteMicrophone");
             if (audioMixerGroups.Length > 0) {
                 _audioSource.outputAudioMixerGroup = audioMixerGroups[0];

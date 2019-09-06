@@ -1,7 +1,7 @@
 {
-  "name": "oshoham.unity-google-cloud-streaming-speech-to-text",
+  "name": "com.oshoham.unity-google-cloud-streaming-speech-to-text",
   "displayName": "Unity Google Cloud Streaming Speech-to-Text",
-  "version": "0.1.11",
+  "version": "0.1.0",
   "description": "A cross-platform Unity plugin that uses the Google Cloud Speech-To-Text API to perform real-time, streaming transcription of microphone input.",
   "files": [
       "package.json.meta",
