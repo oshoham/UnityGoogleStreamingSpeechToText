@@ -1,0 +1,14 @@
+{
+  "scopedRegistries": [
+    {
+      "name": "oshoham",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "oshoham"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.unity.package-manager-ui": "2.1.2",
+  }
+}
