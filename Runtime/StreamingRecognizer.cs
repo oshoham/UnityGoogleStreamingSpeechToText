@@ -12,7 +12,7 @@ using Google.Protobuf.WellKnownTypes;
 using Google.Cloud.Speech.V1;
 using Grpc.Core;
 
-namespace GoogleCloudSpeech {
+namespace UnityGoogleCloudStreamingSpeechToText {
     [Serializable]
     public class TranscriptionEvent : UnityEvent<string> { }
 

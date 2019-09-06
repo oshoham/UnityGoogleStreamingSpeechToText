@@ -2,7 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace GoogleCloudSpeech {
+namespace UnityGoogleCloudStreamingSpeechToText {
     [CustomEditor(typeof(StreamingRecognizer))]
     public class StreamingRecognizerEditor : Editor {
         public override void OnInspectorGUI() {
