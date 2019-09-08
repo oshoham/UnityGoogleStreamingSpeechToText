@@ -1,0 +1,15 @@
+{
+    "name": "Google Cloud Streaming Speech-to-Text.Editor",
+    "references": [
+        "GUID:da87acc52bd70415c9440d3fb44e959e"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

@@ -1,8 +1,6 @@
 {
-    "name": "UnityGoogleCloudStreamingSpeechToText.Editor",
-    "references": [
-        "GUID:da87acc52bd70415c9440d3fb44e959e"
-    ],
+    "name": "Google Cloud Streaming Speech-to-Text.Runtime",
+    "references": [],
     "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
