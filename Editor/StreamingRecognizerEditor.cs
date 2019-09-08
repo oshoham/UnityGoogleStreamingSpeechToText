@@ -2,6 +2,8 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
+
 namespace GoogleCloudStreamingSpeechToText {
     [CustomEditor(typeof(StreamingRecognizer))]
     public class StreamingRecognizerEditor : Editor {
@@ -60,3 +62,5 @@ namespace GoogleCloudStreamingSpeechToText {
         }
     }
 }
+
+#endif
