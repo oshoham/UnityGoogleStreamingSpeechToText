@@ -1,7 +1,7 @@
 {
   "name": "com.oshoham.unity-google-cloud-streaming-speech-to-text",
   "displayName": "Google Cloud Streaming Speech-to-Text",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A cross-platform Unity plugin that uses the Google Cloud Speech-To-Text API to perform real-time, streaming transcription of microphone input.",
   "files": [
     "package.json.meta",
@@ -12,6 +12,13 @@
     "Plugins/Grpc.Core/*",
     "Resources*",
     "Runtime*"
+  ],
+  "samples": [
+    {
+      "displayName": "Basic Usage",
+      "description": "Demonstrates how to use the StreamingRecognizer class to transcribe speech.",
+      "path": "Samples~/Basic"
+    }
   ],
   "repository": {
     "type": "git",
