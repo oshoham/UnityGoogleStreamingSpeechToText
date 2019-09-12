@@ -1,4 +1,4 @@
-# Unity Google Cloud Streaming Speech-to-Text
+# Unity Google Streaming Speech-to-Text
 
 ## Installation
 
