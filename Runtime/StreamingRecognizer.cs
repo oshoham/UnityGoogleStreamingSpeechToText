@@ -113,8 +113,6 @@ namespace GoogleCloudStreamingSpeechToText {
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath);
 
             AudioConfiguration audioConfiguration = AudioSettings.GetConfiguration();
-            audioConfiguration.dspBufferSize = 1024;
-            AudioSettings.Reset(audioConfiguration);
 
             _buffer = new byte[audioConfiguration.dspBufferSize * 2];
 
