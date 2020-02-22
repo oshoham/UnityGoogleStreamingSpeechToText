@@ -24,13 +24,14 @@ This plugin is available as a Unity package hosted on [NPM](https://www.npmjs.co
 
 ## Setup
 
-1. Follow step 1 of Google's [Cloud Speech-to-Text Quickstart Guide](https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries#before-you-begin) to:
+1. In the Project Settings menu, change Player -> Configuration -> API Compatibility Level to **.NET 4.x**. 
+2. Follow step 1 of Google's [Cloud Speech-to-Text Quickstart Guide](https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries#before-you-begin) to:
     1. Set up a GCP Console project.
     2. Enable the Speech-to-Text API for your project.
     3. Create a service account.
     4. Download your service account's private key as a JSON file.
-2. Rename your private key JSON file to `gcp_credentials.json`.
-3. Place your `gcp_credentials.json` file in a folder called `Assets/StreamingAssets` in your Unity project.
+3. Rename your private key JSON file to `gcp_credentials.json`.
+4. Place your `gcp_credentials.json` file in a folder called `Assets/StreamingAssets` in your Unity project.
 
 ## Usage
 
