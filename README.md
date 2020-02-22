@@ -1,5 +1,9 @@
 # Unity Google Streaming Speech-to-Text
 
+## Compatibility
+
+This library has been tested on OS X and Windows 10 in Unity 2019.1.4f1. At this time, I don't have the time and resources to add support for Android, iOS, or other platforms, but I welcome PRs that address this.
+
 ## Installation
 
 This plugin is available as a Unity package hosted on [NPM](https://www.npmjs.com/package/com.oshoham.unity-google-cloud-streaming-speech-to-text). To install it, add the following lines to your Unity project's `Packages/manifest.json`:
