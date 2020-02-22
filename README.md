@@ -21,7 +21,7 @@ This plugin is available as a Unity package hosted on [NPM](https://www.npmjs.co
   ],
   "dependencies": {
     // other dependencies go here
-    "com.oshoham.unity-google-cloud-streaming-speech-to-text": "0.1.7"
+    "com.oshoham.unity-google-cloud-streaming-speech-to-text": "0.1.8"
   }
 }
 ```
