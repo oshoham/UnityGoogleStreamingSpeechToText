@@ -1,5 +1,7 @@
 # Unity Google Streaming Speech-to-Text
 
+[![openupm](https://img.shields.io/npm/v/com.oshoham.unity-google-cloud-streaming-speech-to-text?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.oshoham.unity-google-cloud-streaming-speech-to-text/)
+
 ## Compatibility
 
 This library has been tested on OS X and Windows 10 in Unity 2019.1.4f1. At this time, I don't have the time and resources to add support for Android, iOS, or other platforms, but I welcome PRs that address this.
