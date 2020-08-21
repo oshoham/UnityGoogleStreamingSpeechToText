@@ -6,24 +6,17 @@ This library has been tested on OS X and Windows 10 in Unity 2019.1.4f1. At this
 
 ## Installation
 
-This plugin is available as a Unity package hosted on [NPM](https://www.npmjs.com/package/com.oshoham.unity-google-cloud-streaming-speech-to-text). To install it, add the following lines to your Unity project's `Packages/manifest.json`:
+This library is available as a Unity package hosted on [UPM](https://openupm.com/packages/com.oshoham.unity-google-cloud-streaming-speech-to-text). The easiest way to install it is via the [UPM command-line tool](https://github.com/openupm/openupm-cli#openupm-cli) (requires Node.js version 12 or higher):
 
-```json
-{
-  "scopedRegistries": [
-    {
-      "name": "npm",
-      "url": "https://registry.npmjs.com",
-      "scopes": [
-        "com.oshoham"
-      ]
-    }
-  ],
-  "dependencies": {
-    // other dependencies go here
-    "com.oshoham.unity-google-cloud-streaming-speech-to-text": "0.1.8"
-  }
-}
+```bash
+# Install openupm-cli
+npm install -g openupm-cli
+
+# Go to your Unity project directory
+cd YOUR_UNITY_PROJECT_DIR
+
+# Install the package
+openupm add com.oshoham.unity-google-cloud-streaming-speech-to-text
 ```
 
 ## Setup
