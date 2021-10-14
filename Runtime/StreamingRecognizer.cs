@@ -61,6 +61,7 @@ namespace GoogleCloudStreamingSpeechToText {
         private const double NormalizedFloatTo16BitConversionFactor = 0x7FFF + 0.4999999999999999;
         private const float MicInitializationTimeout = 1;
         private const int StreamingLimit = 290000; // almost 5 minutes
+        [SerializeField] private string language_code;
 
         public void StartListening() {
             if (!_initialized) {
@@ -290,7 +291,7 @@ namespace GoogleCloudStreamingSpeechToText {
                     Config = new RecognitionConfig() {
                         Encoding = RecognitionConfig.Types.AudioEncoding.Linear16,
                         SampleRateHertz = audioConfiguration.sampleRate,
-                        LanguageCode = "en",
+                        LanguageCode = language_code,
                         MaxAlternatives = 1
                     },
                     InterimResults = returnInterimResults,
