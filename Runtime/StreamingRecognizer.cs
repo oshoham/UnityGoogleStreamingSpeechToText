@@ -32,6 +32,7 @@ namespace GoogleCloudStreamingSpeechToText {
             }
         }
 
+        public string language_code;
         public bool startOnAwake = true;
         public bool returnInterimResults = true;
         public bool enableDebugLogging = false;
@@ -61,7 +62,7 @@ namespace GoogleCloudStreamingSpeechToText {
         private const double NormalizedFloatTo16BitConversionFactor = 0x7FFF + 0.4999999999999999;
         private const float MicInitializationTimeout = 1;
         private const int StreamingLimit = 290000; // almost 5 minutes
-        [SerializeField] private string language_code;
+      
 
         public void StartListening() {
             if (!_initialized) {
@@ -280,6 +281,7 @@ namespace GoogleCloudStreamingSpeechToText {
         }
 
         private async void StreamingMicRecognizeAsync() {
+
             SpeechClient speech = SpeechClient.Create();
             _streamingCall = speech.StreamingRecognize();
 
